@@ -1,0 +1,239 @@
+:root{
+--White: hsl(0, 0%, 100%);
+--Stone_100: hsl(30, 54%, 90%)
+--Stone_150: hsl(30, 18%, 87%)
+--Stone_600: hsl(30, 10%, 34%);
+--Stone_900: hsl(24, 5%, 18%);
+--Brown_800: hsl(14, 45%, 36%);
+--Rose_100: hsl(332, 51%, 32%);
+--Rose_10: hsl(330, 100%, 98%);
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    box-sizing: border-box;
+  }
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}  
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+  /* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+body{
+    background-color:papayawhip;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    max-width: 46rem;   //tablet 736px
+    padding-block: 0 1.75rem;
+    background-color: var(--White);
+    border-radius: 1.5rem;
+}
+.text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-inline:2rem;
+    margin-block: 2rem;
+}
+.text-content>section{
+    margin-bottom: 4rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .main-heading {
+    font-family: "Young Serif";
+    font-weight: 400;
+    font-size: clamp(2.25rem, 5vw, 2.5rem);
+    line-height: 100%;
+    color: var(--Stone_900);
+  }
+  .paragraph {
+    font-family: "Outfit";
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--Stone_600);
+  }
+  .preparation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+    background-color: var(--Rose_10);
+    border-radius: 0.75rem;
+  }
+  .ter_heading {
+    font-family: "Outfit";
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 100%;
+    color: var(--Rose_100);
+  }
+  .preparation_list,
+.ingredients_list,
+.instructions_list {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.preparation-list li::marker {
+    font-weight: 700;
+    color: var(--Rose_100);
+  }
+  .preparation-list .paragraph,
+.ingredients-list .paragraph,
+.instructions-list .paragraph {
+  padding-left: 1rem;
+}
+.ingredients-list li::marker,
+.instructions-list li::marker {
+  font-weight: 700;
+  color: var(--Brown_800);
+}
+.b-bold {
+    font-weight: 700;
+    color: var(--Brown_800);
+  }
+  .instructions::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--Stone_900);
+    display: inline-block;
+    margin-bottom: 1.875rem;
+  }
+  
+  .instructions::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--Stone_900);
+    display: inline-block;
+    margin-top: 2.5rem;
+  }
+  .sec-heading {
+    font-family: "Young Serif";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 100%;
+    color: var(--Brown_800);
+    margin-bottom: 1.5rem;
+  }
+  
+  table {
+    width: 100%;
+    margin-block-start: 0.75rem;
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding-inline-start: 2rem;
+  }
+  tr:not(:last-child){
+border-bottom: 1px solid var(--Stone_900);
+}
+td {
+    padding-block-end: 0.75rem;
+    padding-block-start: 0.75rem;
+  }
